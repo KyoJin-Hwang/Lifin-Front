@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import './global.css';
+import Navigation from '@/components/navigation/navigation';
 export const metadata: Metadata = {
   title: 'LiFin',
   description: '일상에 핀을 더해봐 라이핀!',
@@ -12,7 +13,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navigation />
+        {children}
+      </body>
     </html>
   );
 }
