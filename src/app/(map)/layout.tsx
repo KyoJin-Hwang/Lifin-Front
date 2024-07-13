@@ -1,10 +1,5 @@
-const layout = ({ children }: any) => {
-  return (
-    <div>
-      <h1>Header</h1>
-      {children}
-    </div>
-  );
+const MapLayout = ({ children }: any) => {
+  return <div>{children}</div>;
 };
 
-export default layout;
+export default MapLayout;

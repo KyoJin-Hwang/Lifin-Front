@@ -1,19 +1,10 @@
-/** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
-import Script from 'next/script';
+'use client';
 
-declare global {
-  interface Window {
-    kakao: any;
-  }
-}
+import Map from '@/components/Map/map';
+import React from 'react';
 
 const MapPage = () => {
-  const loadKakaoMap = () => {};
-  return <div css={MapStyle}></div>;
+  return <Map />;
 };
 
 export default MapPage;
-const MapStyle = css`
-  width: 100vw;
-`;
