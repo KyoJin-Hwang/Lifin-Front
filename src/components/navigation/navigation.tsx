@@ -9,9 +9,9 @@ const Navigation = () => {
   const path = usePathname();
   return (
     <div css={navStyle}>
-      <Link href={'/'}>메인 {path === '/' ? '🔥' : ''}</Link>
+      <Link href={'/'}>Main {path === '/' ? '🔥' : ''}</Link>
       <Link href={'/maps/kakao'}>
-        카카오 지도 {path === '/maps/kakao' ? '🔥' : ''}
+        Kakao Map {path === '/maps/kakao' ? '🔥' : ''}
       </Link>
     </div>
   );
