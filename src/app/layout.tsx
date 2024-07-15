@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import './global.css';
 import Navigation from '@/components/navigation/navigation';
 export const metadata: Metadata = {
-  title: 'Lifin',
+  title: 'LifinS',
   description: '일상에 핀을 더해봐 라이핀!',
 };
 
