@@ -10,7 +10,6 @@ import { signIn, useSession } from 'next-auth/react';
 
 export default function LoginPage() {
   const { status, data: session } = useSession();
-  console.log(status);
   return (
     <div className="flex flex-col justify-center">
       <div className="text-blue-800 text-center text-2xl font-semibold italic">

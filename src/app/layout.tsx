@@ -1,9 +1,8 @@
 import './globals.css';
 import { Metadata } from 'next';
 
-import Navigation from '@/components/navigation/navigation';
-
-import AuthContext from '@/components/auth/authContext';
+import AuthContext from '@/components/AuthContext';
+import Navigation from '@/components/Navigation';
 
 export const metadata: Metadata = {
   title: 'Lifin',
