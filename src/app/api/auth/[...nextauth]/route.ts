@@ -6,9 +6,9 @@ import KakaoProvider from 'next-auth/providers/kakao';
 
 const authOptions: NextAuthOptions = {
   session: {
-    // strategy: 'jwt' as const,
-    // maxAge: 60 * 60 * 24,
-    // updateAge: 60 * 60 * 2,
+    strategy: 'jwt' as const,
+    maxAge: 60 * 60 * 24,
+    updateAge: 60 * 60 * 2,
   },
   providers: [
     GoogleProvider({
