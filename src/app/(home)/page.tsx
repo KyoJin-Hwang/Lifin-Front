@@ -3,7 +3,7 @@ import { useSession } from 'next-auth/react';
 
 const Home = () => {
   const { data: session, status } = useSession();
-
+  console.log(session);
   return (
     <div className="text-blue-800 text-center text-2xl font-semibold italic">
       메인 페이지
