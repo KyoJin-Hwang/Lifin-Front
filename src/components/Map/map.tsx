@@ -1,6 +1,3 @@
-/** @jsxImportSource @emotion/react */
-
-import { css } from '@emotion/react';
 import Script from 'next/script';
 
 declare global {
@@ -31,13 +28,9 @@ const Map = () => {
         src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_MAP}&autoload=false`}
         onReady={loadKakaoMap}
       />
-      <div id="map" css={MapStyle}></div>
+      <div id="map" className="w-full h-screen"></div>
     </>
   );
 };
 
 export default Map;
-const MapStyle = css`
-  width: 100%;
-  height: 100vh;
-`;

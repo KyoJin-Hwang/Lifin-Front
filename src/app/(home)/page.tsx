@@ -1,15 +1,24 @@
-/** @jsxImportSource @emotion/react */
-
 'use client';
+import { useSession } from 'next-auth/react';
 
-import Navigation from '@/components/navigation/navigation';
-import { css } from '@emotion/react';
 const Home = () => {
-  return <div css={homeStyle}></div>;
+  const { data: session, status } = useSession();
+
+  return (
+    <div className="text-blue-800 text-center text-2xl font-semibold italic">
+      메인 페이지
+      {status === 'authenticated' && (
+        <>
+          <div className="text-black text-center text-2xl font-semibold ">
+            이름 : {session?.user?.name}
+          </div>
+          <div className="text-black text-center text-2xl font-semibold ">
+            이메일 : {session?.user?.email}
+          </div>
+        </>
+      )}
+    </div>
+  );
 };
-const homeStyle = css`
-  color: black;
-  height: 100vh;
-`;
 
 export default Home;

@@ -1,28 +1,25 @@
-/** @jsxImportSource @emotion/react */
 'use client';
 
-import { css } from '@emotion/react';
+import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const Navigation = () => {
   const path = usePathname();
+  const { data: session, status } = useSession();
   return (
-    <div css={navStyle}>
+    <div className="my-8 flex justify-center gap-20 text-2xl font-bold">
       <Link href={'/'}>Main {path === '/' ? '🔥' : ''}</Link>
-      <Link href={'/maps/kakao'}>
-        Kakao Map {path === '/maps/kakao' ? '🔥' : ''}
-      </Link>
+      <Link href={'/maps'}>Kakao Map {path === '/maps' ? '🔥' : ''}</Link>
+      {status === 'authenticated' ? (
+        <button onClick={() => signOut()}>
+          Logout {path === '/login' ? '🔥' : ''}
+        </button>
+      ) : (
+        <Link href={'/login'}>Login {path === '/login' ? '🔥' : ''}</Link>
+      )}
     </div>
   );
 };
 
 export default Navigation;
-const navStyle = css`
-  margin: 30px 0px;
-  justify-content: center;
-  display: flex;
-  gap: 20px;
-  font-size: 24px;
-  font-weight: bold;
-`;

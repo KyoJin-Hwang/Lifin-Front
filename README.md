@@ -19,7 +19,14 @@
 - ⚛️ Create Next App
 - 0️⃣ Zero-install
 - 💢 ESLint & Prettier
-- 🎨 Emotion
+
+  24.07.20 스타일변경
+
+- ~~🎨 Emotion~~
+
+  next 자체에서 emotion을 지원하지않아 className did not client server error
+
+- 🎨 tailwind
 
 ## 1️⃣ 디렉토리 구조
 
