@@ -1,8 +1,7 @@
 import './globals.css';
 import { Metadata } from 'next';
-
-import AuthContext from '@/components/AuthContext';
-import Navigation from '@/components/Navigation';
+import { NextLayout, NextProvider } from './providers';
+import GoogleAnalytics from './googleAnalytics';
 
 export const metadata: Metadata = {
   title: 'Lifin',
@@ -16,12 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <AuthContext>
-        <body>
-          <Navigation />
-          {children}
-        </body>
-      </AuthContext>
+      <body>
+        <GoogleAnalytics GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_ID} />
+        <NextProvider>
+          <NextLayout>{children}</NextLayout>
+        </NextProvider>
+      </body>
     </html>
   );
 }
