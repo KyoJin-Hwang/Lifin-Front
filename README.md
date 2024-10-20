@@ -12,7 +12,7 @@
 <img src="https://img.shields.io/badge/Node.js 20.12.1-339933?style=for-the-badge&logo=Node.js&logoColor=white">
 <img src="https://img.shields.io/badge/Yarn 4.3.1-346?style=for-the-badge&logo=yarn&logoColor=blue">
 <img src="https://img.shields.io/badge/React 18.2.0-white?style=for-the-badge&logo=react&logoColor=blue">
-<img src="https://img.shields.io/badge/NPM 14.2.4-000000?style=for-the-badge&logo=next.js&logoColor=white">
+<img src="https://img.shields.io/badge/Next 14.2.4-000000?style=for-the-badge&logo=next.js&logoColor=white">
 
 ## 📖 특징 ( Features )
 
